@@ -8,6 +8,8 @@ services:
       POSTGRES_USER: ${WSRS_DB_USER}
       POSTGRES_PASSWORD: ${WSRS_DB_PASSWORD}
       POSTGRES_DB: ${WSRS_DB_NAME}
+    volumes:
+      - db:/var/lib/postgresql/data
   pgadmin:
     image: dpage/pgadmin4:latest
     restart: unless-stopped
